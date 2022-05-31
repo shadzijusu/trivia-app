@@ -11,11 +11,13 @@ function Quiz() {
     setChecking(true);
     var object = JSON.parse(localStorage.getItem("chosenAnswers"));
     var filteredArray = object.filter((answer) => answer !== "");
+    if(filteredArray.length > 0) {
     for (let i = 0; i < questions.length; i++) {
       if (questions[i].correct_answer === filteredArray[i]) {
         setPoints((prevValue) => prevValue + 1);
       }
     }
+}
     localStorage.clear()
 
   }
@@ -54,10 +56,6 @@ function Quiz() {
               isChosen: false,
             });
           odgovori.push({ answer: question.correct_answer, id: nanoid() });
-          for (let i = odgovori.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [odgovori[i], odgovori[j]] = [odgovori[j], odgovori[i]];
-        }
           return (
             <Question
               key={nanoid()}
