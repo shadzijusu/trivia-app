@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Karla;
+}
+.main {
+  width: 500px;
+}
+.answers {
+  display: flex;
+  justify-content: center;
+}
+
+.question {
+  margin-left: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #293264;
+  padding: 10px;
+}
+.button {
+  box-sizing: border-box;
+  border-color: #293264;
+  border: 0.794239px solid #4d5b9e;
+  background-color: white;
+  color: #4D5B9E;
+  border-radius: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 20px;
+}
